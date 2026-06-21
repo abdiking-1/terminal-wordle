@@ -2,23 +2,6 @@ import random
 import sys
 
 
-"""
-print(f"{GREEN_BG} {letter.upper()} {RESET}", end=" ")
-                    secret_word_letters.remove(letter)
-
-                elif letter in secret_word_letters:
-                    print(f"{YELLOW_BG} {letter.upper()} {RESET}", end=" ")
-                    secret_word_letters.remove(letter)
-            else:
-                print(f"{GREY_BG} {letter.upper()} {RESET}", end=" ")
-
-        if i == 5:
-            print("\n\nYOU'VE WON THE GAME, CONGRATULATIONS!")
-            sys.exit()¨
-
-        print(f"{GREEN_BG} {letter.upper()} {RESET}", end=" ")
-"""
-
 GREEN_BG = "\033[42m\033[30m"
 YELLOW_BG = "\033[43m\033[30m"
 GREY_BG = "\033[100m\033[37m"
@@ -34,21 +17,11 @@ def file_into_words_list():
     
     return lista
 
-
 class Guess:
 
     def __init__(self, attempt_word, secret_word):
         self.word = attempt_word
         self.result = self.check_letters(secret_word)
-
-
-    def check_letters_v2(self, secret_word):
-        pass
-
-
-            
-            
-
 
     def check_letters(self, secret_word):
         secret_word_letters = []
@@ -126,8 +99,6 @@ class WordleGame:
         
         print("\n\nyou've lost unfortunately, the word was "
          + self.secret_word + "\n\n")
-
-
 
 
 if __name__ == "__main__":
